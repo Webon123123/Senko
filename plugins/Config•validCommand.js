@@ -28,6 +28,6 @@ export async function before(m) {
    const comando = m.text.trim().split(' ')[0];
    await m.reply(`✐︎ El comando *${comando}* no existe.
 Para ver la lista de comandos usa:
-🜸 *#help*`);
+🜸 *!help*`);
   }
 }

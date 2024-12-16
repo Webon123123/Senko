@@ -37,7 +37,7 @@ await conn.reply(m.chat, '✘ ChatGpT no puede responder a esa pregunta.', m, fa
 
 handler.help = ['ia', 'chatgpt']
 handler.tags = ['ai']
-handler.register = true
+handler.register = false
 handler.coin = 2
 handler.command = ['ia', 'chatgpt']
 

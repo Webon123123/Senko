@@ -13,7 +13,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
   let userName = user ? user.name : await conn.getName(who);
 
   if (chat.welcome && m.messageStubType == 27) {
-    let bienvenida = `❀ *Bienvenido* a ${groupMetadata.subject}\n ✰ @${m.messageStubParameters[0].split`@`[0]}\n${welcom1}\n •(=^●ω●^=)• Disfruta tu estadia en el grupo!\n> ✐ Puedes usar *#help* para ver la lista de comandos.`;
+    let bienvenida = `❀ *Bienvenido* a ${groupMetadata.subject}\n ✰ @${m.messageStubParameters[0].split`@`[0]}\n${welcom1}\n •(=^●ω●^=)• Disfruta tu estadia en el grupo!\n> ✐ Puedes usar *!help* para ver la lista de comandos.`;
 
 await conn.sendMini(m.chat, botname, dev, bienvenida, catalogo, catalogo, enlace, estilo)
   }
@@ -24,6 +24,6 @@ await conn.sendMini(m.chat, botname, dev, bye, catalogo, catalogo, estilo)
   }
 
   if (chat.welcome && m.messageStubType == 28) {
-    let kick = `❀ *Adiós* De ${groupMetadata.subject}\n ✰ @${m.messageStubParameters[0].split`@`[0]}\n${welcom3}\n\n •(=^●ω●^=)• Fue echado del grupo!\n> ✐ Puedes usar *#help* para ver la lista de comandos.`;
+    let kick = `❀ *Adiós* De ${groupMetadata.subject}\n ✰ @${m.messageStubParameters[0].split`@`[0]}\n${welcom3}\n\n •(=^●ω●^=)• Fue echado del grupo!\n> ✐ Puedes usar *!help* para ver la lista de comandos.`;
 await conn.sendMini(m.chat, packname, dev, kick, catalogo, catalogo, enlace, estilo)
 }}

@@ -16,6 +16,6 @@ await conn.reply(m.chat, `✘ Gemini no puede responder a esa pregunta.`, m, rca
 handler.command = ['gemini']
 handler.help = ['gemini']
 handler.tags = ['ai']
-handler.register = true 
+handler.register = false
 handler.coin = 2
 export default handler
