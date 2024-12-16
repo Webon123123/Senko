@@ -24,7 +24,7 @@ async function reportError(e) {
 await m.reply(`✨️ Ocurrió un error.`)
 console.log(e)
 }
-let thumb = icons
+
 let pp, ch, q, mime, buffer, media, inviteUrlch, imageBuffer
 
 switch (true) {     
@@ -183,7 +183,7 @@ break
 
 // Dejar de seguir un canal de WhatsApp 
 case isCommand3:
-if (!isOwner || !isROwner) return await conn.reply(m.chat, `🚩 No tienes permiso para usar este comando.`, m, fake)
+if (!isOwner || !isROwner) return await conn.reply(m.chat, `🚩 No tienes permiso para usar este comando.`, m)
 ch
 if (!text) return await conn.reply(m.chat, `🚩 Ingrese el ID o enlace de un canal de WhatsApp que quiere que el bot deje de seguir.\n\nPuede obtener el ID usando el comando:\n${usedPrefix}superinspect enlace${txtBotAdminCh}`, m, rcanal)
 if (text.includes("@newsletter")) {
@@ -493,7 +493,7 @@ break
 handler.tags = ['tools']
 handler.help = ['nuevafotochannel', 'nosilenciarcanal', 'silenciarcanal', 'noseguircanal', 'seguircanal', 'avisoschannel', 'resiviravisos', 'inspect', 'inspeccionar', 'eliminarfotochannel', 'reactioneschannel', 'reaccioneschannel', 'nuevonombrecanal', 'nuevadescchannel']
 handler.command = ['nuevafotochannel', 'nosilenciarcanal', 'silenciarcanal', 'noseguircanal', 'seguircanal', 'avisoschannel', 'resiviravisos', 'inspect', 'inspeccionar', 'eliminarfotochannel', 'reactioneschannel', 'reaccioneschannel', 'nuevonombrecanal', 'nuevadescchannel']
-handler.register = true
+handler.register = false
 export default handler 
 
 function formatDate(n, locale = "es", includeTime = true) {
